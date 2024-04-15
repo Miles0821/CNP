@@ -83,7 +83,7 @@
 
   - name: Remove undesirable packages
     package:
-      name :"{{ unnecessary _ software }}"
+      name : "{{ unnecessary _ software }}"
       state: absent
 
   - name: Stop and disable unnecessary services
@@ -114,7 +114,8 @@
       — / etc/ issue.net
 
 handlers:
-  — name: Reload SSH
+  - name: Reload SSH
     service:
-        name: sshd
-        state: reloaded
+      name: sshd
+      state: reloaded
+
